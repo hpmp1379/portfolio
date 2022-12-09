@@ -1,0 +1,18 @@
+@mixin box($height: auto, $width: 100%) {
+  height: $height;
+  width: $width;
+}
+
+$cyan-hex: #01d1ff;
+$cyan-rgba: rgba(0, 255, 255, 1);
+$magenta-hex: #fa00ff;
+$magenta-rgba: rgba(250, 0, 255, 0.5);
+$yellow-hex: #faff00;
+$yellow-rgba: rgba(250, 255, 0, 0.5);
+
+$text-dark: #313131;
+$text-light: #fafafa;
+
+$bg-white: #fefefe;
+$bg-light: #f9f9f9;
+$bg-dark: #3a3a3a;

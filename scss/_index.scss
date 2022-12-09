@@ -1,0 +1,59 @@
+body {
+  display: flex;
+  overflow: hidden;
+}
+
+.hdrWrap {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  header {
+    @include box(100%);
+    max-width: 1680px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border-top: 10px solid black;
+    border-bottom: 5px solid gray;
+    h1 {
+      @include box(100px, 540px);
+    }
+    .emptyBox {
+      @include box(85px, calc(100% - 560px));
+      background: $bg-white;
+    }
+  }
+}
+
+.menuWrap {
+  @include box(100vh, 670px);
+  padding-top: 40vh;
+  border: 1px solid green;
+  position: relative;
+  .menu {
+    margin-left: 120px;
+    h2 {
+      line-height: 2;
+      border: 1px solid red;
+    }
+  }
+  .footer {
+    position: absolute;
+    bottom: 5px;
+    left: 120px;
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+.container {
+  @include box(80vh, 1230px);
+  margin-top: 20vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  .sectionIntro {
+  }
+}
