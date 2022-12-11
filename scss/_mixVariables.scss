@@ -6,13 +6,16 @@
 $cyan-hex: #01d1ff;
 $cyan-rgba: rgba(0, 255, 255, 1);
 $magenta-hex: #fa00ff;
-$magenta-rgba: rgba(250, 0, 255, 0.5);
+$magenta-rgba: rgba(250, 0, 255, 1);
 $yellow-hex: #faff00;
-$yellow-rgba: rgba(250, 255, 0, 0.5);
+$yellow-rgba: rgba(250, 255, 0, 1);
+$yellow-dark: rgba(230, 235, 0, 1);
 
 $text-dark: #313131;
+$text-dark2: rgba(0,0,0,0.3);
 $text-light: #fafafa;
+$text-light2: rgba(255,255,255,0.7);
 
-$bg-white: #fefefe;
+$bg-white: #fdfdfd;
 $bg-light: #f9f9f9;
 $bg-dark: #3a3a3a;

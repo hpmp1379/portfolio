@@ -1,0 +1,30 @@
+.menu {
+    h2 {
+        a{
+            transition: text-shadow 0.1s linear, color 0.1s;
+        }
+    }
+    #menu1{
+        &:hover{
+            color: $text-light2;
+            text-shadow: 
+                // 2px 2px 0px $text-dark,
+                20px 20px 0 $cyan-rgba, 
+                -20px -20px 0 $magenta-rgba;
+        }
+    }
+    #menu2:hover{
+        color: $text-light2;
+        text-shadow: 
+            20px 20px 0 $magenta-rgba, 
+            -20px -20px 0 $yellow-rgba,
+            -19px -19px 0px $yellow-dark;
+    }
+    #menu3:hover{
+        color: $text-light2;
+        text-shadow: 
+            20px 20px 0 $yellow-rgba, 
+            21px 21px 0px $yellow-dark,
+            -20px -20px 0 $cyan-rgba;
+    }
+}
