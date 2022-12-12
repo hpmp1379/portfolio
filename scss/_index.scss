@@ -20,6 +20,19 @@
     border-bottom: 5px solid gray;
     h1 {
       @include box(85px, 540px);
+
+      a {
+        &:hover{
+          animation-name: colorChange;
+          animation-duration: 2s;
+          animation-iteration-count: infinite;
+            @keyframes colorChange {
+              25% {color: $cyan-hex;}
+              50% {color: $magenta-hex;}
+              75% {color: $yellow-hex;}
+            }
+        }
+      }
     }
     .emptyBox {
       @include box(85px, calc(100% - 560px));
@@ -32,38 +45,6 @@
   @include box(100vh, 670px);
   padding-top: 35vh;
   position: relative;
-  // .menuBG{
-  //   width: 100px;
-  //   height: 100px;
-  //   position: absolute;
-  //   top: 0; left: 0;
-  // }
-  // #right{
-  //   transform: skew(45deg);
-  //   background-image: linear-gradient(
-  //     0deg, 
-  //     rgba(155,155,155,0.3) 25%, 
-  //     transparent 25%, 
-  //     transparent 50%,
-  //     rgba(155,155,155,0.3) 50%, 
-  //     rgba(155,155,155,0.3) 75%, 
-  //     transparent 75%, 
-  //     transparent);
-  //   background-size: 5px 5px;
-  // }
-  // #left{
-  //   transform: skew(-90deg);
-  //   background-image: linear-gradient(
-  //     -90deg, 
-  //     rgba(155,155,155,0.3) 25%, 
-  //     transparent 25%, 
-  //     transparent 50%,
-  //     rgba(155,155,155,0.3) 50%, 
-  //     rgba(155,155,155,0.3) 75%, 
-  //     transparent 75%, 
-  //     transparent);
-  //   background-size: 5px 5px;
-  // }
 
   .menu {
     margin-left: 120px;
@@ -83,30 +64,45 @@
 
 .container {
   @include box(80vh, 1230px);
-  margin-top: 20vh;
+  margin-top: calc(20vh + 5px);
+  margin-left: 10px;
   overflow: hidden;
   overflow-y: scroll;
-  .sectionIntro {
-    header {
-      h3 {
-        // height: 0;
-        // overflow: hidden;
-        line-height: 80px;
-        margin-top: 80px;
-      }
-    }
-    section {
-      margin-top: 100px;
-      text-align: center;
-      img {
-        // height: 0; overflow: hidden;
+  // scrollbar-width: none;
+  position: relative;
 
-      }
-      .texts {
-        text-align: left;
-        margin-top: 40px;
-        h5 {}
-      }
+  &::before{
+    content: '';
+    position: absolute;
+    width: 10px; height: 10px;
+    top: 89%; right: 50px;
+    border: 1px solid black;
+    border-top: none; border-right: none;
+    transform: rotate(-45deg);
+    animation-name: scroller2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    @keyframes scroller2 {
+      0% { top: 84%; opacity: 0;}
+      100% { top: 88%; opacity: 1;}
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 10px; height: 10px;
+    top: 90%; right: 50px;
+    border: 1px solid black;
+    border-top: none; border-right: none;
+    transform: rotate(-45deg);
+    animation-name: scroller;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    @keyframes scroller {
+      0% { top: 85%; opacity: 0;}
+      100% { top: 90%; opacity: 1;}
     }
   }
 }
