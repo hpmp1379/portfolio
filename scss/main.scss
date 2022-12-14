@@ -3,12 +3,9 @@
 @import "fonts.scss";
 @import "mixVariables.scss";
 @import "reset.scss";
-// @import "landing.scss";
-@import "index.scss";
-@import "menu.scss";
 
-// sections in order
-@import 'sectionMain.scss';
-@import 'sectionIntro.scss';
-@import 'sectionSkills.scss';
-@import 'sectionPortfolio.scss';
+@import "index.scss";
+@import "menuBG.scss";
+
+// section
+@import "sectionMain.scss";

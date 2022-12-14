@@ -1,6 +1,63 @@
 .sectionMain {
-    width: calc(100% - 100px);
-    img {
-        width: 100%;
+  width: calc(100% - 100px);
+  img {
+    width: 100%;
+  }
+}
+
+.sectionIntro {
+  margin-top: 120px;
+  header {
+    h3 {
+      // height: 0;
+      // overflow: hidden;
+      line-height: 80px;
     }
+  }
+  section {
+    margin-top: 100px;
+    text-align: center;
+    img {
+      // height: 0; overflow: hidden;
+    }
+    .texts {
+      text-align: left;
+      margin-top: 40px;
+      h5 {
+        line-height: 1em;
+      }
+      p {
+        text-indent: 1em;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.sectionSkills {
+  margin-top: 120px;
+  header {
+  }
+  section {
+    h5 {
+      text-indent: 1em;
+      line-height: 2em;
+    }
+    ul {
+      li {
+        text-indent: 2em;
+        img {
+          height: 60px;
+        }
+      }
+    }
+  }
+}
+
+.sectionPortfolio {
+  margin-top: 120px;
+  header {
+  }
+  section {
+  }
 }
