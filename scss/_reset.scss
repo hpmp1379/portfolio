@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
+html,body {
   width: 100vw;
   height: 100vh;
   font-size: 60px;
@@ -26,6 +26,11 @@ p {
   font-size: 24px;
   font-weight: 300;
 }
+li {
+  font-family: 'Inter', sans-serif;
+  font-size: 1em;
+  line-height: 1.2em;
+}
 
 h1,
 h2,
@@ -41,13 +46,21 @@ h6 {
 
 h1 {
   font-size: 72px;
+  
 }
 h2 {
-  font-size: 72px;
+  // font-size: 72px;
+  font-size: 1.2em;
 }
 h3 {
-  font-size: 60px;
+  // font-size: 60px;
+  font-size: 1em;
+}
+h4 {
+  // font-size: 48px;
+  font-size: 0.8em;
 }
 h5 {
-  font-size: 48px;
+  // font-size: 36px;
+  font-size: 0.6em;
 }

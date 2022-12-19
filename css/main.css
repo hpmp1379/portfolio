@@ -12,7 +12,7 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   width: 100vw;
   height: 100vh;
   font-size: 60px;
@@ -35,6 +35,12 @@ p {
   font-weight: 300;
 }
 
+li {
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
 h1,
 h2,
 h3,
@@ -52,15 +58,19 @@ h1 {
 }
 
 h2 {
-  font-size: 72px;
+  font-size: 1.2em;
 }
 
 h3 {
-  font-size: 60px;
+  font-size: 1em;
+}
+
+h4 {
+  font-size: 0.8em;
 }
 
 h5 {
-  font-size: 48px;
+  font-size: 0.6em;
 }
 
 body {
@@ -70,7 +80,7 @@ body {
 
 .hdrWrap {
   width: 100%;
-  height: 100px;
+  height: 10vh;
   position: absolute;
   top: 10vh;
   left: 0;
@@ -85,10 +95,11 @@ body {
   justify-content: space-between;
   border-top: 10px solid black;
   border-bottom: 5px solid gray;
+  overflow: hidden;
 }
 .hdrWrap header h1 {
   height: 85px;
-  width: 540px;
+  width: 30%;
 }
 .hdrWrap header h1 a:hover {
   animation-name: colorChange;
@@ -114,12 +125,14 @@ body {
 
 .menuWrap {
   height: 100vh;
-  width: 670px;
-  padding-top: 35vh;
+  width: 33.3333333333vw;
+  padding-top: 40vh;
   position: relative;
+  overflow: hidden;
 }
 .menuWrap .menu {
-  margin-left: 120px;
+  width: calc(100% - 120px);
+  float: right;
 }
 .menuWrap .menu h2 {
   line-height: 2;
@@ -127,7 +140,8 @@ body {
 .menuWrap .footer {
   position: absolute;
   bottom: 5px;
-  left: 120px;
+  right: 0;
+  width: 80%;
 }
 .menuWrap .footer p {
   font-size: 16px;
@@ -135,11 +149,12 @@ body {
 
 .container {
   height: 80vh;
-  width: 1230px;
-  margin-top: calc(20vh + 5px);
+  width: 66.6666666667vw;
+  margin-top: 20vh;
   margin-left: 10px;
   overflow: hidden;
   overflow-y: scroll;
+  scrollbar-width: none;
   position: relative;
 }
 .container::before {
@@ -233,15 +248,19 @@ body {
   text-shadow: 20px 20px 0 rgb(250, 255, 0), 21px 21px 0px rgb(230, 235, 0), -20px -20px 0 rgb(0, 255, 255);
 }
 
-.sectionMain {
-  width: calc(100% - 100px);
+div.allSection {
+  width: calc(100% - 120px);
 }
+div.allSection:not(:nth-of-type(1)) {
+  margin-top: 160px;
+}
+
 .sectionMain img {
   width: 100%;
 }
 
 .sectionIntro {
-  margin-top: 120px;
+  width: 100%;
 }
 .sectionIntro header h3 {
   line-height: 80px;
@@ -262,12 +281,10 @@ body {
   margin-top: 20px;
 }
 
-.sectionSkills {
-  margin-top: 120px;
-}
 .sectionSkills section h5 {
   text-indent: 1em;
-  line-height: 2em;
+  line-height: 1em;
+  margin-top: 40px;
 }
 .sectionSkills section ul li {
   text-indent: 2em;
@@ -276,8 +293,54 @@ body {
   height: 60px;
 }
 
-.sectionPortfolio {
-  margin-top: 120px;
+@media (max-width: 1439px) {
+  h2 {
+    font-size: 1em;
+  }
+  .menuWrap .menu {
+    width: 80%;
+  }
+  .container div.allSection {
+    width: 90%;
+  }
+  .container div.allSection:not(:nth-of-type(1)) {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 1079px) {
+  h2 {
+    font-size: 0.8em;
+  }
+  .container div.allSection:not(:nth-of-type(1)) {
+    margin-top: 80px;
+  }
+}
+@media (max-width: 959px) {
+  h1 {
+    font-size: 1em;
+    line-height: 1.4em;
+  }
+  h2 {
+    font-size: 0.6em;
+  }
+  .menuWrap .menu h2 {
+    line-height: 3em;
+  }
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: 0.8em;
+    line-height: 1.6em;
+  }
+}
+@media (max-width: 599px) {
+  h1 {
+    font-size: 0.6em;
+    line-height: 2.2em;
+  }
+  p {
+    font-size: 18px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
