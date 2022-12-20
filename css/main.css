@@ -150,12 +150,15 @@ body {
 .container {
   height: 80vh;
   width: 66.6666666667vw;
+  position: relative;
   margin-top: 20vh;
   margin-left: 10px;
   overflow: hidden;
   overflow-y: scroll;
   scrollbar-width: none;
-  position: relative;
+}
+.container::-webkit-scrollbar {
+  display: none;
 }
 .container::before {
   content: "";

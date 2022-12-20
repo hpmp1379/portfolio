@@ -1,4 +1,4 @@
- body {
+body {
   display: flex;
   overflow: hidden;
 }
@@ -23,15 +23,21 @@
       @include box(85px, 30%);
 
       a {
-        &:hover{
+        &:hover {
           animation-name: colorChange;
           animation-duration: 2s;
           animation-iteration-count: infinite;
-            @keyframes colorChange {
-              25% {color: $cyan-hex;}
-              50% {color: $magenta-hex;}
-              75% {color: $yellow-hex;}
+          @keyframes colorChange {
+            25% {
+              color: $cyan-hex;
             }
+            50% {
+              color: $magenta-hex;
+            }
+            75% {
+              color: $yellow-hex;
+            }
+          }
         }
       }
     }
@@ -43,7 +49,7 @@
 }
 
 .menuWrap {
-  @include box(100vh, calc(1/3 * 100vw));
+  @include box(100vh, calc(1 / 3 * 100vw));
   padding-top: 40vh;
   position: relative;
   overflow: hidden;
@@ -67,47 +73,69 @@
 
 // General Styling. Section Styling in sectionmain.scss
 .container {
-  @include box(80vh, calc(2/3 * 100vw));
+  @include box(80vh, calc(2 / 3 * 100vw));
+  position: relative;
   margin-top: 20vh;
   margin-left: 10px;
+  // scrollbar hide for FF and Chrome
   overflow: hidden;
   overflow-y: scroll;
   scrollbar-width: none;
-  position: relative;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   // Arrow Down animation
-  &::before{
-    content: '';
+  &::before {
+    content: "";
     position: absolute;
-    width: 10px; height: 10px;
-    top: 89%; right: 50px;
+    width: 10px;
+    height: 10px;
+    top: 89%;
+    right: 50px;
     border: 1px solid black;
-    border-top: none; border-right: none;
+    border-top: none;
+    border-right: none;
     transform: rotate(-45deg);
     animation-name: scroller2;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 
     @keyframes scroller2 {
-      0% { top: 84%; opacity: 0;}
-      100% { top: 88%; opacity: 1;}
+      0% {
+        top: 84%;
+        opacity: 0;
+      }
+      100% {
+        top: 88%;
+        opacity: 1;
+      }
     }
   }
   &::after {
-    content: '';
+    content: "";
     position: absolute;
-    width: 10px; height: 10px;
-    top: 90%; right: 50px;
+    width: 10px;
+    height: 10px;
+    top: 90%;
+    right: 50px;
     border: 1px solid black;
-    border-top: none; border-right: none;
+    border-top: none;
+    border-right: none;
     transform: rotate(-45deg);
     animation-name: scroller;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 
     @keyframes scroller {
-      0% { top: 85%; opacity: 0;}
-      100% { top: 90%; opacity: 1;}
+      0% {
+        top: 85%;
+        opacity: 0;
+      }
+      100% {
+        top: 90%;
+        opacity: 1;
+      }
     }
   }
 }
