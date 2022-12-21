@@ -1,84 +1,102 @@
-
 // Menu Wrap
 @media (max-width: 1439px) {
-    h2 {
-        font-size: 1em;
-    }
+  h2 {
+    font-size: 1em;
+  }
 
-    .menuWrap {
-        .menu {
-            width: 80%;
-        }
+  .menuWrap {
+    .menu {
+      width: 80%;
     }
-    .container{
-        div.allSection {
-            width: calc(90%);
-            &:not(:nth-of-type(1)){
-                margin-top: 100px;
-            }
-        }
+  }
+  .container {
+    div.allSection {
+      width: calc(90%);
+      &:not(:nth-of-type(1)) {
+        margin-top: 100px;
+      }
     }
+  }
 }
 
-@media (max-width: 1079px){
-    h2 {
-        font-size: 0.8em;
+@media (max-width: 1079px) {
+  h2 {
+    font-size: 0.9em;
+  }
+  h3 {
+    font-size: 0.8em;
+  }
+  .container {
+    div.allSection {
+      &:not(:nth-of-type(1)) {
+        margin-top: 80px;
+      }
     }
-    .container {
-        div.allSection {
-            &:not(:nth-of-type(1)){
-                margin-top: 80px;
-            }
+    .sectionContact {
+      section {
+        button {
+          font-size: 0.4em;
         }
+      }
     }
+  }
 }
 
-@media (max-width: 959px){
-    h1 {
-        font-size: 1em;
-        line-height: 1.4em;
+@media (max-width: 959px) {
+  h1 {
+    font-size: 1em;
+    line-height: 1.4em;
+  }
+  h2 {
+    font-size: 0.7em;
+  }
+  h3 {
+    font-size: 0.6em;
+  }
+  .menuWrap {
+    .menu {
+      h2 {
+        line-height: 3em;
+      }
     }
-    h2 {
-        font-size: 0.6em;
-    }
-
-
-    .menuWrap {
-        .menu {
-            h2 {
-                line-height: 3em;
-            }
+  }
+  .container {
+    .sectionContact {
+      section {
+        button {
+          @include box(8vh, 80%);
+          font-size: 0.3em;
         }
+        p {
+          font-size: 36px;
+        }
+      }
     }
+  }
 }
 
-@media (max-width: 767px){
-    h1 {
-        font-size: 0.8em;
-        line-height: 1.6em;
-    }
-    
-
+@media (max-width: 767px) {
+  h1 {
+    font-size: 0.8em;
+    line-height: 1.6em;
+  }
 }
 
-@media (max-width: 599px){
-    h1 {
-        font-size: 0.6em;
-        line-height: 2.2em;
+@media (max-width: 599px) {
+  h1 {
+    font-size: 0.6em;
+    line-height: 2.2em;
+  }
+  p {
+    font-size: 18px;
+  }
+  .menuWrap {
+    .menu {
+      // display: none;
     }
-    p {
-        font-size: 18px;
+  }
+  .container {
+    .sectionIntro {
     }
-    .menuWrap {
-        .menu {
-            // display: none;
-        }
-    }
-    .container {
-        .sectionIntro {
-
-        }
-    }
-
-
+  }
 }

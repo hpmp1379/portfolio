@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Min's Portfolio</title>
-    <link rel="icon shortcut" href="img/icon.png">
+    <link rel="icon shortcut" href="img/icon.png" />
     <link rel="stylesheet" href="css/main.css" />
     <script src="js/main.js"></script>
   </head>
@@ -14,9 +14,7 @@
     <div class="hdrWrap">
       <header>
         <h1 class="logo">
-          <a href="#">
-            home
-          </a>
+          <a href="#0"> home </a>
         </h1>
         <!-- <div class="emptyBox"></div> -->
       </header>
@@ -27,23 +25,23 @@
       <div class="menuBG" id="right"></div>
       <div class="menuBG" id="left"></div>
       <div class="menu">
-        <h2><a href="#" id="menu1">about</a></h2>
-        <h2><a href="#" id="menu2">portfolio</a></h2>
-        <h2><a href="#" id="menu3">contact</a></h2>
+        <h2><a href="#1" id="menu1">about</a></h2>
+        <h2><a href="#2" id="menu2">portfolio</a></h2>
+        <h2><a href="#3" id="menu3">contact</a></h2>
       </div>
       <div class="footer">
-        <p>&copy; Copyright 2022. All Rights Reserved.</p>
+        <p>&copy; 2022 Park. All Rights Reserved.</p>
       </div>
     </div>
 
     <!-- position on right -->
     <!-- 0. introduction -->
     <div class="container">
-      <div class="allSection sectionMain">
+      <div class="allSection sectionMain" id="0">
         <img src="https://via.placeholder.com/1130" alt="profile pic" />
       </div>
 
-      <div class="allSection sectionIntro">
+      <div class="allSection sectionIntro" id="1">
         <header>
           <h3>
             Hi, I'm Min Young Park.<br />
@@ -55,16 +53,16 @@
           <div class="texts">
             <h4>Introduction</h4>
             <p>
-              Choosing the right career has been difficult for me.
-              After narrowing down my choices to computer related jobs,
-              I decided to participate in a Front End Web Developer training program.
-              Though hard, I was able to learn a lot on how to code a website.
+              Choosing the right career has been difficult for me. After
+              narrowing down my choices to computer related jobs, I decided to
+              participate in a Front End Web Developer training program. Though
+              hard, I was able to learn a lot on how to code a website.
             </p>
             <p>
               There is still a long way for me to go to become a professional.
-              But there's the saying "A good beginning is half the battle."
-              I want start using my abilities to contribute to the company I work in.
-              Please check out my works, and contact me! Thank you.
+              But there's the saying "A good beginning is half the battle." I
+              want start using my abilities to contribute to the company I work
+              in. Please check out my works, and contact me! Thank you.
             </p>
           </div>
         </section>
@@ -76,36 +74,58 @@
           <h4>List of my skills</h4>
         </header>
         <section>
-          <h5>• Design tools</h5>
+          <h5>Design tools</h5>
           <ul class="design">
-            <li class="tool"><img src="img/tool1.jpg" alt="photoshop"></li>
-            <li class="tool"><img src="img/tool2.jpg" alt="illustrator"></li>
-            <li class="tool"><img src="img/tool3.jpg" alt="figma"></li>
-            <li class="tool"><img src="img/tool4.jpg" alt="adobe xd"></li>
+            <li class="tool">
+              <img src="img/photoshop512.png" alt="photoshop" />
+            </li>
+            <li class="tool">
+              <img src="img/illustrator512.png" alt="illustrator" />
+            </li>
+            <li class="tool"><img src="img/figma512.png" alt="figma" /></li>
+            <li class="tool"><img src="img/xd512.png" alt="adobe xd" /></li>
           </ul>
-          <h5>• Coding</h5>
+          <h5>Coding</h5>
           <ul class="coding">
-            <li><img src="img/coding1.jpg" alt="html"></li>
-            <li><img src="img/coding2.jpg" alt="css"></li>
-            <li><img src="img/coding3.jpg" alt="sass/scss"></li>
-            <li><img src="img/coding4.jpg" alt="jQuery"></li>
-            <li><img src="img/coding5.jpg" alt="javascript"></li>
-            <li><img src="img/coding6.jpg" alt="react js"></li>
-            <li><img src="img/coding7.jpg" alt="ajax/json"></li>
+            <li><img src="img/html512.png" alt="html" /></li>
+            <li><img src="img/css512.png" alt="css" /></li>
+            <li><img src="img/sass512.png" alt="sass/scss" /></li>
+            <li><img src="img/js512.png" alt="javascript" /></li>
+            <li><img src="img/jquery512.png" alt="jQuery" /></li>
+            <li><img src="img/react512.png" alt="react" /></li>
+            <li><img src="img/json512.png" alt="ajax/json" /></li>
           </ul>
         </section>
       </div>
 
       <!-- 2. portfolio gallery & links -->
-      <div class="allSection sectionPortfolio">
+      <div class="allSection sectionPortfolio" id="2">
         <header>
           <h3>Here are my works</h3>
         </header>
         <section>
-          <div class="filterBtn"></div>
+          <!-- <div class="filterBtn"></div> -->
+          <h4>Main Projects</h4>
           <div class="galleryProjects">
-            <h4>Main Projects</h4>
+            <ul>
+              <li>
+                <a href="#"
+                  ><img src="https://via.placeholder.com/300" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="https://via.placeholder.com/300" alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="https://via.placeholder.com/300" alt=""
+                /></a>
+              </li>
+            </ul>
           </div>
+          <h4></h4>
           <!-- <div class="gallery">
             <article>
               <div class="image"></div>
@@ -136,7 +156,7 @@
       </div>
 
       <!-- 3. contact -->
-      <!-- <div class="all Section sectionContact">
+      <div class="allSection sectionContact" id="3">
         <header>
           <h3>you can reach out to me!</h3>
         </header>
@@ -146,7 +166,7 @@
           <button class="yellow">Phone: 010-1234-1234</button>
           <p>thank you!</p>
         </section>
-      </div> -->
+      </div>
     </div>
   </body>
 </html>

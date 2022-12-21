@@ -12,7 +12,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100vw;
   height: 100vh;
   font-size: 60px;
@@ -29,6 +30,16 @@ li {
   list-style: none;
 }
 
+img {
+  vertical-align: middle;
+}
+
+button {
+  font-family: "Inter", sans-serif;
+  font-size: 0.5em;
+  font-weight: 900;
+}
+
 p {
   font-family: "Inter", sans-serif;
   font-size: 24px;
@@ -37,7 +48,7 @@ p {
 
 li {
   font-family: "Inter", sans-serif;
-  font-size: 1em;
+  font-size: 0.8em;
   line-height: 1.2em;
 }
 
@@ -286,14 +297,65 @@ div.allSection:not(:nth-of-type(1)) {
 
 .sectionSkills section h5 {
   text-indent: 1em;
-  line-height: 1em;
+  line-height: 2em;
   margin-top: 40px;
 }
+.sectionSkills section ul {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 40px;
+}
 .sectionSkills section ul li {
-  text-indent: 2em;
+  padding-left: 5vw;
+  width: 50%;
 }
 .sectionSkills section ul li img {
-  height: 60px;
+  height: 100px;
+}
+
+.sectionPortfolio section {
+  margin-top: 40px;
+}
+.sectionPortfolio section .galleryProjects ul {
+  display: flex;
+  margin-top: 40px;
+}
+.sectionPortfolio section .galleryProjects ul li {
+  width: 33.33%;
+  padding: 0 20px;
+}
+.sectionPortfolio section .galleryProjects ul li a img {
+  width: 100%;
+}
+
+.sectionContact {
+  text-align: center;
+  padding: 10vh 0;
+}
+.sectionContact header {
+  margin-bottom: 5vh;
+}
+.sectionContact section button {
+  height: 8vh;
+  width: 50%;
+  margin-top: 5vh;
+  overflow: hidden;
+  border: 5px solid black;
+  background-color: transparent;
+}
+.sectionContact section .cyan {
+  box-shadow: 10px 10px 0 rgb(0, 255, 255);
+}
+.sectionContact section .magenta {
+  box-shadow: 10px 10px 0 rgb(250, 0, 255);
+}
+.sectionContact section .yellow {
+  box-shadow: 10px 10px 0 rgb(250, 255, 0);
+}
+.sectionContact section p {
+  margin-top: 10vh;
+  font-size: 60px;
+  font-weight: 900;
 }
 
 @media (max-width: 1439px) {
@@ -312,10 +374,16 @@ div.allSection:not(:nth-of-type(1)) {
 }
 @media (max-width: 1079px) {
   h2 {
+    font-size: 0.9em;
+  }
+  h3 {
     font-size: 0.8em;
   }
   .container div.allSection:not(:nth-of-type(1)) {
     margin-top: 80px;
+  }
+  .container .sectionContact section button {
+    font-size: 0.4em;
   }
 }
 @media (max-width: 959px) {
@@ -324,10 +392,21 @@ div.allSection:not(:nth-of-type(1)) {
     line-height: 1.4em;
   }
   h2 {
+    font-size: 0.7em;
+  }
+  h3 {
     font-size: 0.6em;
   }
   .menuWrap .menu h2 {
     line-height: 3em;
+  }
+  .container .sectionContact section button {
+    height: 8vh;
+    width: 80%;
+    font-size: 0.3em;
+  }
+  .container .sectionContact section p {
+    font-size: 36px;
   }
 }
 @media (max-width: 767px) {
