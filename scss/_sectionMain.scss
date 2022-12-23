@@ -53,8 +53,10 @@ div.allSection {
       flex-wrap: wrap;
       row-gap: 40px;
       li {
-        padding-left: 5vw;
-        width: 50%;
+        // padding-left: 5vw;
+        width: 25%;
+        // border: 1px solid red;
+        text-align: center;
         img {
           height: 100px;
         }
