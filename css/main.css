@@ -167,6 +167,7 @@ body {
   overflow: hidden;
   overflow-y: scroll;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 .container::-webkit-scrollbar {
   display: none;
