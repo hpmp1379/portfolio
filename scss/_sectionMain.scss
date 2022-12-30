@@ -103,12 +103,19 @@ div.allSection {
     margin-bottom: 5vh;
   }
   section {
-    button {
+    a {
+      font-family: "Inter", sans-serif;
+      font-size: 0.5em;
+      font-weight: 900;
+      display: block;
       @include box(8vh, 50%);
+      margin: 0 auto;
       margin-top: 5vh;
       overflow: hidden;
       border: 5px solid black;
       background-color: transparent;
+      line-height: 8vh;
+      font-size: 0.5em;
     }
     .cyan {
       box-shadow: 10px 10px 0 $cyan-rgba;

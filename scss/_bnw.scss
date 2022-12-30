@@ -1,0 +1,69 @@
+// stylesheet for black and white
+.bnw {
+  background-color: $bg-black;
+  color: $text-light;
+}
+.hdrWrap.bnw {
+  background-color: transparent;
+  header {
+    border-top: 10px solid $bg-light;
+    h1 {
+      color: $text-light;
+      a {
+        &:hover {
+          color: $text-white;
+        }
+      }
+    }
+  }
+}
+
+.menuWrap.bnw {
+  background: transparent;
+  #right {
+    background: repeating-linear-gradient(
+      45deg,
+      #333,
+      #333 2px,
+      #000 2px,
+      #000 10px
+    );
+  }
+  #left {
+    background: repeating-linear-gradient(
+      -45deg,
+      #333,
+      #333 2px,
+      #000 2px,
+      #000 10px
+    );
+  }
+  .btnClose {
+    i {
+      color: $text-light;
+    }
+  }
+  .menu {
+    color: $text-light;
+    #menu1:hover {
+      color: $text-white;
+    }
+    #menu2:hover {
+      color: $text-white;
+    }
+    #menu3:hover {
+      color: $text-white;
+    }
+  }
+}
+
+.container.bnw {
+  .sectionContact {
+    section {
+      a {
+        border: 5px solid $gray-medium;
+        background-color: transparent;
+      }
+    }
+  }
+}

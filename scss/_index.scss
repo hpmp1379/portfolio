@@ -1,6 +1,7 @@
 body {
   display: flex;
   overflow: hidden;
+  // transition: background-color 0.3s, color 0.3s;
 }
 
 .hdrWrap {
@@ -10,6 +11,7 @@ body {
   top: 10vh;
   left: 0;
   z-index: 10;
+  // transition: background-color 0.3s, color 0.3s;
   header {
     @include box(100%, 90%);
     max-width: 1680px;
@@ -20,30 +22,28 @@ body {
     border-bottom: 5px solid gray;
     overflow: hidden;
     h1 {
-      @include box(85px, 30%);
-
+      @include box(100%, 30%);
+      color: $text-black;
+      line-height: 10vh;
       a {
-        &:hover {
-          animation-name: colorChange;
-          animation-duration: 2s;
-          animation-iteration-count: infinite;
-          @keyframes colorChange {
-            25% {
-              color: $cyan-hex;
-            }
-            50% {
-              color: $magenta-hex;
-            }
-            75% {
-              color: $yellow-hex;
-            }
-          }
-        }
+        transition: color 0.3s;
+        display: block;
+        height: 100%;
       }
     }
-    .emptyBox {
-      @include box(85px, calc(100% - 560px));
-      background: $bg-white;
+    .bnwOnOff {
+      @include box(100%, calc(70% - 10px));
+      line-height: 10vh;
+      button {
+        width: 100%;
+        cursor: pointer;
+        display: block;
+        height: 100%;
+        text-align: right;
+        i {
+          font-size: 3vh;
+        }
+      }
     }
   }
 }
@@ -53,6 +53,7 @@ body {
   padding-top: 40vh;
   position: relative;
   overflow: hidden;
+  // transition: background-color 0.3s, color 0.3s;
   .menu {
     width: calc(100% - 120px);
     float: right;
@@ -74,6 +75,7 @@ body {
 // General Styling. Section Styling in sectionmain.scss
 .container {
   @include box(80vh, calc(2 / 3 * 100vw));
+  // transition: background-color 0.3s, color 0.3s;
   position: relative;
   margin-top: 20vh;
   margin-left: 10px;

@@ -7,23 +7,34 @@
     <title>Min's Portfolio</title>
     <link rel="icon shortcut" href="img/icon.png" />
     <link rel="stylesheet" href="css/main.css" />
+
+    <script
+      src="https://kit.fontawesome.com/ea416fc906.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="js/main.js"></script>
   </head>
-  <body>
+  <body class="bnw">
     <!-- position on top -->
-    <div class="hdrWrap">
+    <div class="hdrWrap bnw">
       <header>
         <h1 class="logo">
           <a href="landing.html"> home </a>
         </h1>
-        <!-- <div class="emptyBox"></div> -->
+        <div class="bnwOnOff">
+          <button><i class="fa-solid fa-circle-half-stroke"></i></button>
+        </div>
       </header>
     </div>
 
     <!-- position on left -->
-    <div class="menuWrap">
+    <div class="menuWrap bnw">
       <div class="menuBG" id="right"></div>
       <div class="menuBG" id="left"></div>
+      <div class="btnClose" id="menuClose">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
       <div class="menu">
         <h2><a href="#1" id="menu1">about</a></h2>
         <h2><a href="#2" id="menu2">portfolio</a></h2>
@@ -36,7 +47,7 @@
 
     <!-- position on right -->
     <!-- 0. introduction -->
-    <div class="container">
+    <div class="container bnw">
       <!-- <div class="allSection sectionMain" id="0">
         <img src="https://via.placeholder.com/1130" alt="profile pic" />
       </div> -->
@@ -126,7 +137,7 @@
               </li>
             </ul>
           </div>
-          <h4>Cloning Site</h4>
+          <h4>Clone Site</h4>
           <div class="galleryProjects">
             <ul>
               <li>
@@ -153,9 +164,13 @@
           <h3>you can reach out to me!</h3>
         </header>
         <section>
-          <button class="cyan">resume.pdf</button>
-          <button class="magenta">Email: abcd@gmail.com</button>
-          <button class="yellow">Phone: 010-1234-1234</button>
+          <a href="upload/test.pdf" class="cyan">
+            resume.pdf <i class="fa-solid fa-file-arrow-down"></i>
+          </a>
+          <a href="mailto:abcd@gmail.com" class="magenta"
+            >Email: abcd@gmail.com</a
+          >
+          <a href="tel:010-1234-1234" class="yellow">Phone: 010-1234-1234</a>
           <p>thank you!</p>
         </section>
       </div>

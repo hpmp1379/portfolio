@@ -1,5 +1,9 @@
 // Menu Wrap
+//-------------------- 1439max ----------------------
 @media (max-width: 1439px) {
+  h1 {
+    font-size: 6vh;
+  }
   h2 {
     font-size: 1em;
   }
@@ -16,10 +20,21 @@
         margin-top: 100px;
       }
     }
+    .sectionContact {
+      section {
+        a {
+          font-size: 0.3em;
+        }
+      }
+    }
   }
 }
 
+//-----------------------1079 max-------------------------
 @media (max-width: 1079px) {
+  h1 {
+    font-size: 5vh;
+  }
   h2 {
     font-size: 0.9em;
   }
@@ -34,24 +49,31 @@
     }
     .sectionContact {
       section {
-        button {
-          font-size: 0.4em;
+        a {
+          font-size: 0.3em;
         }
       }
     }
   }
 }
 
+//-------------------- 959 max -----------------------------
 @media (max-width: 959px) {
   h1 {
-    font-size: 1em;
-    line-height: 1.4em;
+    font-size: 4vh;
   }
   h2 {
     font-size: 0.7em;
   }
   h3 {
     font-size: 0.6em;
+  }
+  .sectionIntro {
+    header {
+      h3 {
+        line-height: initial;
+      }
+    }
   }
   .menuWrap {
     .menu {
@@ -63,9 +85,10 @@
   .container {
     .sectionContact {
       section {
-        button {
+        a {
           @include box(8vh, 80%);
           font-size: 0.3em;
+          line-height: 8vh;
         }
         p {
           font-size: 36px;
@@ -75,25 +98,86 @@
   }
 }
 
+//------------------------ 767max ------------------------
 @media (max-width: 767px) {
   h1 {
-    font-size: 0.8em;
-    line-height: 1.6em;
+    font-size: 3vh;
+  }
+  h2 {
+    font-size: 7vh;
+  }
+  .hdrWrap {
+    height: 7vh;
+    header {
+      h1 {
+        line-height: 6vh;
+      }
+    }
+  }
+  .menuWrap {
+    display: none;
+    @include box(100vh, 100vw);
+    padding-top: 40vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 100;
+    text-align: center;
+    .menu {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      h2 {
+        line-height: 2.2;
+      }
+    }
+    .footer {
+      position: absolute;
+      bottom: 5px;
+      right: 0;
+      width: 100%;
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+  .menuWrap {
+    #right {
+      opacity: 1;
+    }
+    #menuClose {
+      display: block;
+    }
+    .menu {
+      color: $text-dark;
+      #menu1 {
+        text-shadow: 0px 5px 0 $cyan-rgba;
+      }
+      #menu2 {
+        text-shadow: 0px 5px 0 $magenta-rgba;
+      }
+      #menu3 {
+        text-shadow: 0px 5px 0 $yellow-rgba;
+      }
+    }
+  }
+  .container {
+    // position: initial;
+    @include box(83vh, 90%);
+    margin: 0 auto;
+    margin-top: 17vh;
   }
 }
 
+//------------------------- 599max -----------------------------
 @media (max-width: 599px) {
-  h1 {
-    font-size: 0.6em;
-    line-height: 2.2em;
+  h2 {
+    font-size: 5vh;
   }
   p {
     font-size: 18px;
-  }
-  .menuWrap {
-    .menu {
-      // display: none;
-    }
   }
   .container {
     .sectionIntro {

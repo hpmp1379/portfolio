@@ -34,12 +34,6 @@ img {
   vertical-align: middle;
 }
 
-button {
-  font-family: "Inter", sans-serif;
-  font-size: 0.5em;
-  font-weight: 900;
-}
-
 p {
   font-family: "Inter", sans-serif;
   font-size: 24px;
@@ -50,6 +44,12 @@ li {
   font-family: "Inter", sans-serif;
   font-size: 0.8em;
   line-height: 1.2em;
+}
+
+button {
+  background-color: transparent;
+  color: inherit;
+  border: none;
 }
 
 h1,
@@ -65,7 +65,7 @@ h6 {
 }
 
 h1 {
-  font-size: 72px;
+  font-size: 8vh;
 }
 
 h2 {
@@ -82,6 +82,54 @@ h4 {
 
 h5 {
   font-size: 0.6em;
+}
+
+.bnw {
+  background-color: #121212;
+  color: #eee;
+}
+
+.hdrWrap.bnw {
+  background-color: transparent;
+}
+.hdrWrap.bnw header {
+  border-top: 10px solid #f9f9f9;
+}
+.hdrWrap.bnw header h1 {
+  color: #eee;
+}
+.hdrWrap.bnw header h1 a:hover {
+  color: #fff;
+}
+
+.menuWrap.bnw {
+  background: transparent;
+}
+.menuWrap.bnw #right {
+  background: repeating-linear-gradient(45deg, #333, #333 2px, #000 2px, #000 10px);
+}
+.menuWrap.bnw #left {
+  background: repeating-linear-gradient(-45deg, #333, #333 2px, #000 2px, #000 10px);
+}
+.menuWrap.bnw .btnClose i {
+  color: #eee;
+}
+.menuWrap.bnw .menu {
+  color: #eee;
+}
+.menuWrap.bnw .menu #menu1:hover {
+  color: #fff;
+}
+.menuWrap.bnw .menu #menu2:hover {
+  color: #fff;
+}
+.menuWrap.bnw .menu #menu3:hover {
+  color: #fff;
+}
+
+.container.bnw .sectionContact section a {
+  border: 5px solid #8a8a8a;
+  background-color: transparent;
 }
 
 body {
@@ -109,29 +157,30 @@ body {
   overflow: hidden;
 }
 .hdrWrap header h1 {
-  height: 85px;
+  height: 100%;
   width: 30%;
+  color: #000;
+  line-height: 10vh;
 }
-.hdrWrap header h1 a:hover {
-  animation-name: colorChange;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+.hdrWrap header h1 a {
+  transition: color 0.3s;
+  display: block;
+  height: 100%;
 }
-@keyframes colorChange {
-  25% {
-    color: #01d1ff;
-  }
-  50% {
-    color: #fa00ff;
-  }
-  75% {
-    color: #faff00;
-  }
+.hdrWrap header .bnwOnOff {
+  height: 100%;
+  width: calc(70% - 10px);
+  line-height: 10vh;
 }
-.hdrWrap header .emptyBox {
-  height: 85px;
-  width: calc(100% - 560px);
-  background: #fdfdfd;
+.hdrWrap header .bnwOnOff button {
+  width: 100%;
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  text-align: right;
+}
+.hdrWrap header .bnwOnOff button i {
+  font-size: 3vh;
 }
 
 .menuWrap {
@@ -251,16 +300,30 @@ body {
   transition: text-shadow 0.1s linear, color 0.1s;
 }
 .menu #menu1:hover {
-  color: rgba(255, 255, 255, 0.7);
-  text-shadow: 20px 20px 0 rgb(0, 255, 255), -20px -20px 0 rgb(250, 0, 255);
+  color: #000;
+  text-shadow: 0px 5px 0 rgb(0, 255, 255);
 }
 .menu #menu2:hover {
-  color: rgba(255, 255, 255, 0.7);
-  text-shadow: 20px 20px 0 rgb(250, 0, 255), -20px -20px 0 rgb(250, 255, 0), -19px -19px 0px rgb(230, 235, 0);
+  color: #000;
+  text-shadow: 0px 5px 0 rgb(250, 0, 255);
 }
 .menu #menu3:hover {
-  color: rgba(255, 255, 255, 0.7);
-  text-shadow: 20px 20px 0 rgb(250, 255, 0), 21px 21px 0px rgb(230, 235, 0), -20px -20px 0 rgb(0, 255, 255);
+  color: #000;
+  text-shadow: 0px 5px 0 rgb(250, 255, 0);
+}
+
+.btnClose {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  display: none;
+}
+.btnClose i {
+  color: #313131;
+  cursor: pointer;
+}
+.btnClose i:hover {
+  color: #000;
 }
 
 #flip {
@@ -277,7 +340,7 @@ body {
   font-size: 15vw;
   font-weight: bold;
   font-weight: 700;
-  color: #fafafa;
+  color: #eee;
   line-height: 100vh;
   letter-spacing: 5px;
   transform: perspective(500px) rotateY(90deg);
@@ -328,7 +391,7 @@ body {
   line-height: 1em;
   width: 100px;
   height: 100px;
-  color: #fafafa;
+  color: #eee;
   background-color: #121212;
   margin: 0 10px;
 }
@@ -419,13 +482,20 @@ div.allSection:not(:nth-of-type(1)) {
 .sectionContact header {
   margin-bottom: 5vh;
 }
-.sectionContact section button {
+.sectionContact section a {
+  font-family: "Inter", sans-serif;
+  font-size: 0.5em;
+  font-weight: 900;
+  display: block;
   height: 8vh;
   width: 50%;
+  margin: 0 auto;
   margin-top: 5vh;
   overflow: hidden;
   border: 5px solid black;
   background-color: transparent;
+  line-height: 8vh;
+  font-size: 0.5em;
 }
 .sectionContact section .cyan {
   box-shadow: 10px 10px 0 rgb(0, 255, 255);
@@ -443,6 +513,9 @@ div.allSection:not(:nth-of-type(1)) {
 }
 
 @media (max-width: 1439px) {
+  h1 {
+    font-size: 6vh;
+  }
   h2 {
     font-size: 1em;
   }
@@ -455,8 +528,14 @@ div.allSection:not(:nth-of-type(1)) {
   .container div.allSection:not(:nth-of-type(1)) {
     margin-top: 100px;
   }
+  .container .sectionContact section a {
+    font-size: 0.3em;
+  }
 }
 @media (max-width: 1079px) {
+  h1 {
+    font-size: 5vh;
+  }
   h2 {
     font-size: 0.9em;
   }
@@ -466,14 +545,13 @@ div.allSection:not(:nth-of-type(1)) {
   .container div.allSection:not(:nth-of-type(1)) {
     margin-top: 80px;
   }
-  .container .sectionContact section button {
-    font-size: 0.4em;
+  .container .sectionContact section a {
+    font-size: 0.3em;
   }
 }
 @media (max-width: 959px) {
   h1 {
-    font-size: 1em;
-    line-height: 1.4em;
+    font-size: 4vh;
   }
   h2 {
     font-size: 0.7em;
@@ -481,13 +559,17 @@ div.allSection:not(:nth-of-type(1)) {
   h3 {
     font-size: 0.6em;
   }
+  .sectionIntro header h3 {
+    line-height: initial;
+  }
   .menuWrap .menu h2 {
     line-height: 3em;
   }
-  .container .sectionContact section button {
+  .container .sectionContact section a {
     height: 8vh;
     width: 80%;
     font-size: 0.3em;
+    line-height: 8vh;
   }
   .container .sectionContact section p {
     font-size: 36px;
@@ -495,14 +577,75 @@ div.allSection:not(:nth-of-type(1)) {
 }
 @media (max-width: 767px) {
   h1 {
-    font-size: 0.8em;
-    line-height: 1.6em;
+    font-size: 3vh;
+  }
+  h2 {
+    font-size: 7vh;
+  }
+  .hdrWrap {
+    height: 7vh;
+  }
+  .hdrWrap header h1 {
+    line-height: 6vh;
+  }
+  .menuWrap {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 40vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 100;
+    text-align: center;
+  }
+  .menuWrap .menu {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .menuWrap .menu h2 {
+    line-height: 2.2;
+  }
+  .menuWrap .footer {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    width: 100%;
+  }
+  .menuWrap .footer p {
+    font-size: 16px;
+  }
+  .menuWrap #right {
+    opacity: 1;
+  }
+  .menuWrap #menuClose {
+    display: block;
+  }
+  .menuWrap .menu {
+    color: #313131;
+  }
+  .menuWrap .menu #menu1 {
+    text-shadow: 0px 5px 0 rgb(0, 255, 255);
+  }
+  .menuWrap .menu #menu2 {
+    text-shadow: 0px 5px 0 rgb(250, 0, 255);
+  }
+  .menuWrap .menu #menu3 {
+    text-shadow: 0px 5px 0 rgb(250, 255, 0);
+  }
+  .container {
+    height: 83vh;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 17vh;
   }
 }
 @media (max-width: 599px) {
-  h1 {
-    font-size: 0.6em;
-    line-height: 2.2em;
+  h2 {
+    font-size: 5vh;
   }
   p {
     font-size: 18px;
