@@ -20,10 +20,13 @@
     <div class="hdrWrap bnw">
       <header>
         <h1 class="logo">
-          <a href="landing.html"> home </a>
+          <a href="index.html"> home </a>
         </h1>
         <div class="bnwOnOff">
-          <button><i class="fa-solid fa-circle-half-stroke"></i></button>
+          <button class="bnwToggle">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+          </button>
+          <button class="burgerIcon"><i class="fa-solid fa-bars"></i></button>
         </div>
       </header>
     </div>
@@ -37,8 +40,9 @@
       </div>
       <div class="menu">
         <h2><a href="#1" id="menu1">about</a></h2>
-        <h2><a href="#2" id="menu2">portfolio</a></h2>
-        <h2><a href="#3" id="menu3">contact</a></h2>
+        <h2><a href="#2" id="menu2">skills</a></h2>
+        <h2><a href="#3" id="menu3">portfolio</a></h2>
+        <h2><a href="#4" id="menu4">contact</a></h2>
       </div>
       <div class="footer">
         <p>&copy; 2022 Park. All Rights Reserved.</p>
@@ -67,13 +71,8 @@
               Choosing the right career has been difficult for me. After
               narrowing down my choices to computer related jobs, I decided to
               participate in a Front End Web Developer training program. Though
-              hard, I was able to learn a lot on how to code a website.
-            </p>
-            <p>
-              There is still a long way for me to go to become a professional.
-              But there's the saying "A good beginning is half the battle." I
-              want start using my abilities to contribute to the company I work
-              in.
+              hard, I was able to learn a lot on how to code a website. I want
+              to start contributing to the company by using these abilities.
             </p>
             <p>Please check out my works, and contact me! Thank you.</p>
           </div>
@@ -81,47 +80,72 @@
       </div>
 
       <!-- 1. skills and levels -->
-      <div class="allSection sectionSkills">
+      <div class="allSection sectionSkills" id="2">
         <header>
-          <h4>List of my skills</h4>
+          <h4>Skills</h4>
         </header>
         <section>
           <h5>Design tools</h5>
           <ul class="design">
             <li class="tool">
               <img src="img/logos/photoshop512.png" alt="photoshop" />
+              <p>Photoshop</p>
             </li>
             <li class="tool">
               <img src="img/logos/illustrator512.png" alt="illustrator" />
+              <p>Illustrator</p>
             </li>
             <li class="tool">
               <img src="img/logos/figma512.png" alt="figma" />
+              <p>Figma</p>
             </li>
             <li class="tool">
               <img src="img/logos/xd512.png" alt="adobe xd" />
+              <p>Adobe XD</p>
             </li>
           </ul>
           <h5>Coding</h5>
           <ul class="coding">
-            <li><img src="img/logos/html512.png" alt="html" /></li>
-            <li><img src="img/logos/css512.png" alt="css" /></li>
-            <li><img src="img/logos/sass512.png" alt="sass/scss" /></li>
-            <li><img src="img/logos/js512.png" alt="javascript" /></li>
-            <li><img src="img/logos/jquery512.png" alt="jQuery" /></li>
-            <li><img src="img/logos/react512.png" alt="react" /></li>
-            <li><img src="img/logos/json512.png" alt="ajax/json" /></li>
+            <li>
+              <img src="img/logos/html512.png" alt="html" />
+              <p>HTML 5</p>
+            </li>
+            <li>
+              <img src="img/logos/css512.png" alt="css" />
+              <p>CSS 3</p>
+            </li>
+            <li>
+              <img src="img/logos/sass512.png" alt="sass/scss" />
+              <p>SASS / SCSS</p>
+            </li>
+            <li>
+              <img src="img/logos/js512.png" alt="javascript" />
+              <p>JS / ES6</p>
+            </li>
+            <li>
+              <img src="img/logos/jquery512.png" alt="jQuery" />
+              <p>jQuery</p>
+            </li>
+            <li>
+              <img src="img/logos/react512.png" alt="react" />
+              <p>React</p>
+            </li>
+            <li>
+              <img src="img/logos/json512.png" alt="ajax/json" />
+              <p>JSON</p>
+            </li>
           </ul>
         </section>
       </div>
 
       <!-- 2. portfolio gallery & links -->
-      <div class="allSection sectionPortfolio" id="2">
+      <div class="allSection sectionPortfolio" id="3">
         <header>
-          <h3>Here are my works</h3>
+          <h4>Portfolio</h4>
         </header>
         <section>
           <!-- <div class="filterBtn"></div> -->
-          <h4>Main Projects</h4>
+          <h5>Main Projects</h5>
           <div class="galleryProjects">
             <ul>
               <li>
@@ -137,7 +161,7 @@
               </li>
             </ul>
           </div>
-          <h4>Clone Site</h4>
+          <h5>Clone Site</h5>
           <div class="galleryProjects">
             <ul>
               <li>
@@ -159,7 +183,7 @@
       </div>
 
       <!-- 3. contact -->
-      <div class="allSection sectionContact" id="3">
+      <div class="allSection sectionContact" id="4">
         <header>
           <h3>you can reach out to me!</h3>
         </header>

@@ -23,7 +23,6 @@ body {
     overflow: hidden;
     h1 {
       @include box(100%, 30%);
-      color: $text-black;
       line-height: 10vh;
       a {
         transition: color 0.3s;
@@ -34,12 +33,17 @@ body {
     .bnwOnOff {
       @include box(100%, calc(70% - 10px));
       line-height: 10vh;
+      display: flex;
+      justify-content: flex-end;
+      .burgerIcon {
+        display: none;
+      }
       button {
-        width: 100%;
         cursor: pointer;
         display: block;
         height: 100%;
         text-align: right;
+        margin-left: 30px;
         i {
           font-size: 3vh;
         }
@@ -50,7 +54,7 @@ body {
 
 .menuWrap {
   @include box(100vh, calc(1 / 3 * 100vw));
-  padding-top: 40vh;
+  padding-top: 30vh;
   position: relative;
   overflow: hidden;
   // transition: background-color 0.3s, color 0.3s;
@@ -91,10 +95,10 @@ body {
   // Arrow Down animation
   &::before {
     content: "";
-    position: absolute;
+    position: fixed;
     width: 10px;
     height: 10px;
-    top: 89%;
+    top: 80%;
     right: 50px;
     border: 1px solid black;
     border-top: none;
@@ -110,17 +114,17 @@ body {
         opacity: 0;
       }
       100% {
-        top: 88%;
+        top: 89%;
         opacity: 1;
       }
     }
   }
   &::after {
     content: "";
-    position: absolute;
+    position: fixed;
     width: 10px;
     height: 10px;
-    top: 90%;
+    top: 85%;
     right: 50px;
     border: 1px solid black;
     border-top: none;

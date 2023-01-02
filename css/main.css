@@ -95,9 +95,6 @@ h5 {
 .hdrWrap.bnw header {
   border-top: 10px solid #f9f9f9;
 }
-.hdrWrap.bnw header h1 {
-  color: #eee;
-}
 .hdrWrap.bnw header h1 a:hover {
   color: #fff;
 }
@@ -115,7 +112,7 @@ h5 {
   color: #eee;
 }
 .menuWrap.bnw .menu {
-  color: #eee;
+  color: #fff;
 }
 .menuWrap.bnw .menu #menu1:hover {
   color: #fff;
@@ -126,7 +123,26 @@ h5 {
 .menuWrap.bnw .menu #menu3:hover {
   color: #fff;
 }
+.menuWrap.bnw .menu #menu4:hover {
+  color: #fff;
+}
+.menuWrap.bnw .footer p {
+  color: #a9a9a9;
+}
 
+.container.bnw::before {
+  border: 1px solid white;
+  border-right: none;
+  border-top: none;
+}
+.container.bnw::after {
+  border: 1px solid white;
+  border-right: none;
+  border-top: none;
+}
+.container.bnw .sectionSkills p {
+  color: #fff;
+}
 .container.bnw .sectionContact section a {
   border: 5px solid #8a8a8a;
   background-color: transparent;
@@ -159,7 +175,6 @@ body {
 .hdrWrap header h1 {
   height: 100%;
   width: 30%;
-  color: #000;
   line-height: 10vh;
 }
 .hdrWrap header h1 a {
@@ -171,13 +186,18 @@ body {
   height: 100%;
   width: calc(70% - 10px);
   line-height: 10vh;
+  display: flex;
+  justify-content: flex-end;
+}
+.hdrWrap header .bnwOnOff .burgerIcon {
+  display: none;
 }
 .hdrWrap header .bnwOnOff button {
-  width: 100%;
   cursor: pointer;
   display: block;
   height: 100%;
   text-align: right;
+  margin-left: 30px;
 }
 .hdrWrap header .bnwOnOff button i {
   font-size: 3vh;
@@ -186,7 +206,7 @@ body {
 .menuWrap {
   height: 100vh;
   width: 33.3333333333vw;
-  padding-top: 40vh;
+  padding-top: 30vh;
   position: relative;
   overflow: hidden;
 }
@@ -223,10 +243,10 @@ body {
 }
 .container::before {
   content: "";
-  position: absolute;
+  position: fixed;
   width: 10px;
   height: 10px;
-  top: 89%;
+  top: 80%;
   right: 50px;
   border: 1px solid black;
   border-top: none;
@@ -242,16 +262,16 @@ body {
     opacity: 0;
   }
   100% {
-    top: 88%;
+    top: 89%;
     opacity: 1;
   }
 }
 .container::after {
   content: "";
-  position: absolute;
+  position: fixed;
   width: 10px;
   height: 10px;
-  top: 90%;
+  top: 85%;
   right: 50px;
   border: 1px solid black;
   border-top: none;
@@ -310,6 +330,10 @@ body {
 .menu #menu3:hover {
   color: #000;
   text-shadow: 0px 5px 0 rgb(250, 255, 0);
+}
+.menu #menu4:hover {
+  color: #000;
+  text-shadow: 0 5px 0 #8a8a8a;
 }
 
 .btnClose {
@@ -408,7 +432,8 @@ div.allSection {
   width: calc(100% - 120px);
 }
 div.allSection:not(:nth-of-type(1)) {
-  margin-top: 160px;
+  margin-top: 80px;
+  padding: 40px 0;
 }
 
 .sectionMain img {
@@ -417,6 +442,7 @@ div.allSection:not(:nth-of-type(1)) {
 
 .sectionIntro {
   width: 100%;
+  padding-top: 40px;
 }
 .sectionIntro header h3 {
   line-height: 80px;
@@ -454,12 +480,26 @@ div.allSection:not(:nth-of-type(1)) {
 .sectionSkills section ul li img {
   height: 100px;
 }
+.sectionSkills section ul li img:hover + p {
+  opacity: 1;
+}
+.sectionSkills section ul li p {
+  width: 100px;
+  color: #000;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
 
 .sectionPortfolio section {
   margin-top: 40px;
 }
-.sectionPortfolio section h4 {
+.sectionPortfolio section h5 {
   margin-top: 40px;
+  text-indent: 1em;
 }
 .sectionPortfolio section .galleryProjects ul {
   display: flex;
@@ -477,7 +517,7 @@ div.allSection:not(:nth-of-type(1)) {
 
 .sectionContact {
   text-align: center;
-  padding: 10vh 0;
+  padding-bottom: 120px !important;
 }
 .sectionContact header {
   margin-bottom: 5vh;
@@ -519,14 +559,14 @@ div.allSection:not(:nth-of-type(1)) {
   h2 {
     font-size: 1em;
   }
+  h3 {
+    font-size: 0.8em;
+  }
   .menuWrap .menu {
     width: 80%;
   }
   .container div.allSection {
     width: 90%;
-  }
-  .container div.allSection:not(:nth-of-type(1)) {
-    margin-top: 100px;
   }
   .container .sectionContact section a {
     font-size: 0.3em;
@@ -539,11 +579,8 @@ div.allSection:not(:nth-of-type(1)) {
   h2 {
     font-size: 0.9em;
   }
-  h3 {
-    font-size: 0.8em;
-  }
-  .container div.allSection:not(:nth-of-type(1)) {
-    margin-top: 80px;
+  .container .sectionIntro section p {
+    font-size: 20px;
   }
   .container .sectionContact section a {
     font-size: 0.3em;
@@ -562,8 +599,14 @@ div.allSection:not(:nth-of-type(1)) {
   .sectionIntro header h3 {
     line-height: initial;
   }
+  .sectionIntro section p {
+    font-size: 18px;
+  }
   .menuWrap .menu h2 {
     line-height: 3em;
+  }
+  .container::before, .container::after {
+    display: none;
   }
   .container .sectionContact section a {
     height: 8vh;
@@ -587,6 +630,9 @@ div.allSection:not(:nth-of-type(1)) {
   }
   .hdrWrap header h1 {
     line-height: 6vh;
+  }
+  .hdrWrap header .bnwOnOff .burgerIcon {
+    display: block;
   }
   .menuWrap {
     display: none;
@@ -636,11 +682,28 @@ div.allSection:not(:nth-of-type(1)) {
   .menuWrap .menu #menu3 {
     text-shadow: 0px 5px 0 rgb(250, 255, 0);
   }
+  .menuWrap .menu #menu4 {
+    text-shadow: 0 5px 0 #555;
+  }
   .container {
     height: 83vh;
     width: 90%;
     margin: 0 auto;
     margin-top: 17vh;
+  }
+  .container div.allSection {
+    width: 100%;
+  }
+  .container div.allSection:not(:nth-of-type(1)) {
+    padding: 40px 0;
+    margin-top: 120px;
+  }
+  .container .sectionSkills p {
+    opacity: 1;
+    color: #a9a9a9 !important;
+  }
+  .container.bnw .sectionSkills p {
+    color: #313131 !important;
   }
 }
 @media (max-width: 599px) {
@@ -649,6 +712,9 @@ div.allSection:not(:nth-of-type(1)) {
   }
   p {
     font-size: 18px;
+  }
+  .container .sectionIntro section p {
+    font-size: 16px;
   }
 }
 

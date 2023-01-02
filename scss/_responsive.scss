@@ -7,6 +7,9 @@
   h2 {
     font-size: 1em;
   }
+  h3 {
+    font-size: 0.8em;
+  }
 
   .menuWrap {
     .menu {
@@ -17,7 +20,7 @@
     div.allSection {
       width: calc(90%);
       &:not(:nth-of-type(1)) {
-        margin-top: 100px;
+        // margin-top: 100px;
       }
     }
     .sectionContact {
@@ -38,13 +41,12 @@
   h2 {
     font-size: 0.9em;
   }
-  h3 {
-    font-size: 0.8em;
-  }
   .container {
-    div.allSection {
-      &:not(:nth-of-type(1)) {
-        margin-top: 80px;
+    .sectionIntro {
+      section {
+        p {
+          font-size: 20px;
+        }
       }
     }
     .sectionContact {
@@ -74,6 +76,11 @@
         line-height: initial;
       }
     }
+    section {
+      p {
+        font-size: 18px;
+      }
+    }
   }
   .menuWrap {
     .menu {
@@ -83,6 +90,10 @@
     }
   }
   .container {
+    &::before,
+    &::after {
+      display: none;
+    }
     .sectionContact {
       section {
         a {
@@ -111,6 +122,11 @@
     header {
       h1 {
         line-height: 6vh;
+      }
+      .bnwOnOff {
+        .burgerIcon {
+          display: block;
+        }
       }
     }
   }
@@ -161,6 +177,9 @@
       #menu3 {
         text-shadow: 0px 5px 0 $yellow-rgba;
       }
+      #menu4 {
+        text-shadow: 0 5px 0 $text-gray;
+      }
     }
   }
   .container {
@@ -168,6 +187,26 @@
     @include box(83vh, 90%);
     margin: 0 auto;
     margin-top: 17vh;
+    div.allSection {
+      width: 100%;
+      &:not(:nth-of-type(1)) {
+        padding: 40px 0;
+        margin-top: 120px;
+      }
+    }
+    .sectionSkills {
+      p {
+        opacity: 1;
+        color: $text-gray2 !important;
+      }
+    }
+  }
+  .container.bnw {
+    .sectionSkills {
+      p {
+        color: $text-dark !important;
+      }
+    }
   }
 }
 
@@ -181,6 +220,11 @@
   }
   .container {
     .sectionIntro {
+      section {
+        p {
+          font-size: 16px;
+        }
+      }
     }
   }
 }
